@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동창회 초대장</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 워드프레스 프리미엄 테마 스타일의 우아한 폰트 (고운 바탕, Noto Sans) -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container wp-theme-wrapper">
+        <!-- Hero Header -->
+        <header class="header hero-section">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <p class="subtitle">다시 만나는 반가운 얼굴들</p>
+                    <h1>우리들의 동창회</h1>
+                    <div class="divider"></div>
+                    <p class="date">2026. 11. 01</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Invitation Text Section -->
+        <section class="section text-section">
+            <h2 class="section-title">초대의 글</h2>
+            <div class="invitation-text" id="invitationText">
+                <p>오랜 시간이 지나도 잊혀지지 않는<br>소중한 추억들.</p>
+                <p>그때 그 시절의 우리로 돌아가<br>함께 웃고 이야기 나누는 자리를 마련했습니다.</p>
+                <p>바쁘시더라도 꼭 참석하셔서<br>자리를 빛내주시기 바랍니다.</p>
+            </div>
+        </section>
+
+        <!-- Photo Section -->
+        <section class="section photo-section">
+            <h2 class="section-title">추억의 사진첩</h2>
+            <div class="slider-container">
+                <div class="slider">
+                    <img src="pictures/입학.jpg" alt="입학" class="slide active">
+                    <img src="pictures/봄소풍.jpg" alt="봄소풍" class="slide">
+                    <img src="pictures/장기자랑.jpg" alt="장기자랑" class="slide">
+                    <img src="pictures/졸업.jpg" alt="졸업" class="slide">
+                </div>
+                <div class="slider-nav">
+                    <button id="prevBtn" class="nav-btn">&lt;</button>
+                    <button id="nextBtn" class="nav-btn">&gt;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countdown Section -->
+        <section class="section countdown-section">
+            <h2 class="section-title">행사일까지</h2>
+            <div class="countdown-wrapper">
+                <div class="countdown" id="countdown">
+                    <div class="time-box">
+                        <span id="days">00</span>
+                        <span class="label">DAYS</span>
+                    </div>
+                    <span class="colon">:</span>
+                    <div class="time-box">
+                        <span id="hours">00</span>
+                        <span class="label">HOURS</span>
+                    </div>
+                    <span class="colon">:</span>
+                    <div class="time-box">
+                        <span id="minutes">00</span>
+                        <span class="label">MINS</span>
+                    </div>
+                    <span class="colon">:</span>
+                    <div class="time-box">
+                        <span id="seconds">00</span>
+                        <span class="label">SECS</span>
+                    </div>
+                </div>
+            </div>
+            <p class="event-date">2026년 11월 1일 (일) 오후 2시</p>
+        </section>
+
+        <!-- Map Section -->
+        <section class="section map-section">
+            <h2 class="section-title">오시는 길</h2>
+            <div class="location-card">
+                <p class="place-name">창경궁</p>
+                <p class="place-desc">서울 종로구 창경궁로 185</p>
+                <div class="map-container" style="display: flex; flex-direction: column; align-items: center;">
+                    <!-- 구글 지도 iframe 내장 -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3161.943141153866!2d126.9926639!3d37.5796175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2d1a37bb729%3A0xe5417ec6e345ee92!2zQ2hhbmdneWVvbmdndW5n!5e0!3m2!1sko!2skr!4v1700000000000!5m2!1sko!2skr" width="300" height="300" style="border:0; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    
+                    <!-- 구글 지도로 연결되는 링크 버튼 -->
+                    <a href="https://www.google.com/maps/search/%EC%B0%BD%EA%B2%BD%EA%B6%81" target="_blank" class="google-map-button">
+                        📍 구글 지도로 길찾기
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+            <p class="footer-text">기대하는 마음으로 기다리겠습니다.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

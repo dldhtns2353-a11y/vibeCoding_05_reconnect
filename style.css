@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* 워드프레스 프리미엄 테마 스타일: 깔끔하고 부드러운 배경색 */
+    background-color: #f4f2ef;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+/* 제목 폰트는 우아한 명조체, 본문은 고딕체 */
+h1, h2, .subtitle, .date, .footer-text, .place-name {
+    font-family: 'Gowun Batang', serif;
+}
+
+p, span, div {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.container {
+    max-width: 480px; /* 모바일 뷰 */
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+/* Hero Header (워드프레스 Astra/Divi 테마 스타일의 풀스크린 커버) */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    max-height: 600px;
+    background: url('pictures/입학.jpg') center/cover no-repeat; /* 배경 이미지(폴더 내 이미지 활용) */
+}
+
+/* 부드러운 오버레이 */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    color: #fff;
+    padding: 2rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .divider {
+    width: 50px;
+    height: 2px;
+    background-color: #d4af37; /* 고급스러운 골드 포인트 */
+    margin: 0 auto 20px;
+}
+
+.hero-content .date {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Sections 공통 */
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.section:nth-child(even) {
+    background-color: #faf9f7; /* 섹션 교차 배경색 */
+}
+
+.section-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+}
+
+/* Invitation Text */
+.invitation-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+    color: #555;
+    word-break: keep-all;
+}
+
+/* Photo Slider (고급스러운 쉐도우와 라운드) */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #f0f0f0;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 15px;
+}
+
+.nav-btn {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Countdown (모던하고 심플한 스타일) */
+.countdown-wrapper {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    margin-bottom: 1.5rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50px;
+}
+
+.time-box span:first-child {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #d4af37;
+    font-family: 'Gowun Batang', serif;
+}
+
+.time-box .label {
+    font-size: 0.75rem;
+    color: #999;
+    letter-spacing: 1px;
+}
+
+.colon {
+    font-size: 1.5rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.event-date {
+    font-size: 1.05rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+/* Map Section */
+.location-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.place-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.place-desc {
+    color: #777;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+}
+
+.google-map-button {
+    display: inline-block;
+    background-color: #4285F4;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+    transition: all 0.3s ease;
+}
+
+.google-map-button:hover {
+    background-color: #3367d6;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+}
+
+/* Footer */
+.footer {
+    background: #f4f2ef;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    color: #888;
+}
